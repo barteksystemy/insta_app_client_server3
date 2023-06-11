@@ -1,0 +1,32 @@
+### POST - rejestracja nowego użytkownika 
+
+POST http://localhost:4000/api/user/register HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "name2",
+  "lastName": "lastName",
+  "email":"name2@email.pl",
+  "password":"password2"
+}
+
+
+### GET - akceptacja tokena dla użytkownika
+
+GET http://localhost:4000/api/user/confirm/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hbWUyQGVtYWlsLnBsIiwicGFzc3dvcmQiOiIkMmEkMTAkNUxBMUFkeWc2bTFEUkNmcTAvS1Y2T1l1ZGJERnVnelZHSEtYUmVaNDE3M2kzd295bE1wc0ciLCJpYXQiOjE2ODU1NTc5MjgsImV4cCI6MTY4NTY0NDMyOH0.ZcoUfj4Uklzbr0f2tqPI_DbLgbTmQTjSH52xIHWsoks HTTP/1.1
+
+### POST - pierwsze logowanie z odesłaniem tokena po zalogowaniu - od tej pory każde żądanie zawiera token
+
+POST http://localhost:4000/api/user/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "name2@email.pl",
+  "password": "password2"
+}
+
+
+### POST - logowania drugie i następne
+
+POST http://localhost:4000/api/user/login HTTP/1.1
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hbWUyQGVtYWlsLnBsIiwicGFzc3dvcmQiOiIkMmEkMTAkZUplRGUyZlVoUDJRbkdjamFWT0lIZU9rUy80UnVVOFBTa2MyZGM3eC9ONzFpcnpQMG5BQUciLCJpYXQiOjE2ODU0NDc3MDAsImV4cCI6MTY4NTQ1NDkwMH0.DVQPVgg7XzWcxw7HYZE-QanS4zC_N91kslHEimzA6gk

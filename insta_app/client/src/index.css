@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    float: left;
+    width: 200px;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+}
+
+#submit {
+    width: 60px;
+    height: 20px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 86px;
+    cursor: pointer;
+}
+
+#answer {
+    width: 800px;
+    background-color: blue;
+    height: 50vh;
+}
+
+.wyloguj {
+    position: absolute;
+    bottom: 30px;
+}
+
+a {
+    color: white;
+}
+
+form {
+    padding: 12px;
+    padding-left: 220px;
+}
+
+#mojebutton {
+    width: 60px;
+    height: 30px;
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+#registerblad {
+    padding-left: 10px;
+}
+
+#wszystkiezdjecia {
+    position: absolute;
+    left: 200px;
+    width: 80vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 10px;
+    margin-left: 10px;
+    overflow: auto;
+}
+
+#wszystkiesubmit {
+    width: 70px;
+    height: 30px;
+    background-color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+}
